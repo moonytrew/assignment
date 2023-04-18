@@ -1,0 +1,125 @@
+table, tr, td, th {
+  /* border: 1px solid black; */
+  border-collapse: collapse;
+  text-align: center;
+  width: 800px;
+  margin-left: 15px;
+}
+
+caption {
+  font-size: 30px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+th {
+  height: 50px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+tr {
+  height: 30px;
+  border-bottom: 1px solid gainsboro;
+}
+
+button {
+  border-radius: 5%;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  background-color: gainsboro;
+  height: 30px;
+  width: 150px;
+}
+
+button.ascending::after {
+  border: none;
+  background-color: none;
+  content: '🔽';
+  display: inline-block;
+  margin-left: 5px;
+}
+
+button.descending::after {
+  border: none;
+  background-color: none;
+  content: '🔼';
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.pagination-container {
+  display: flex;
+  list-style-type: none;
+  margin-left: 180px;
+}
+
+.pagination-item {
+  padding: 0 12px;
+    height: 32px;
+    text-align: center;
+    margin: auto 4px;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    letter-spacing: 0.01071em;
+    border-radius: 16px;
+    line-height: 1.43;
+    font-size: 13px;
+    min-width: 32px;
+}
+
+.dots:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+.pagination-item:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+
+.pagination-item.selected {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.arrow::before {
+  position: relative;
+  content: '';
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+  border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+}
+
+.arrow.left {
+  transform: rotate(-135deg) translate(-50%);
+}
+
+.arrow.right {
+  transform: rotate(45deg);
+}
+
+.arrow.disabled {
+  pointer-events: none;
+}
+
+.arrow.disabled::before {
+  border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+  border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+}
+
+.arrow.disabled:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+input {
+  position: relative;
+  left: 15px;
+  top: 55px;
+}
