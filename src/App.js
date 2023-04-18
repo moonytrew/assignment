@@ -186,15 +186,6 @@ const Pagination = props => {
   );
 };
 
-// -----------------------------End---------------------------------------
-
-// ----------------------------Search-------------------------------------
-
-
-
-// -------------------------------End-------------------------------------
-
-
 
 let PageSize = 20
 
@@ -203,6 +194,7 @@ export default function SpaceList() {
   // eslint-disable-next-line no-unused-vars
   const [filteredData, setFilteredData] = useState(space);
 
+  // 使用 json-server --watch ./space/ExampleQuery.json取得資料
   useEffect(() => {
     //fetch json data
     fetch("http://localhost:3000/data")
